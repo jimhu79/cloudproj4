@@ -17,5 +17,9 @@ before_install:
 
 
 
-install:
+script:
   - docker-compose -f ./udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push jimhu79/reverseproxy
