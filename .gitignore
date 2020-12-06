@@ -1,3 +1,4 @@
 *.txt
 node_modules
-udacity-c3-deployment/k8s/*-secret.yaml
+udacity-c3-deployment/k8s/aws-secret.yaml
+udacity-c3-deployment/k8s/env-secret.yaml
